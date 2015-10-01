@@ -1,17 +1,43 @@
 var fs = require('fs'),
+    pathLib = require('path'),
     cache = {
         404: "<h3>Sorry!</h3>Page not found!"
     },
     contentPath = __dirname + '/contents',
     cacheable = false;
 
-module.exports = function(path) {
+module.exports = function(path, ctype) {
         
     switch(path) {
         case '/': 
         case '/index':
-            return getPage('/index.html');
-        break;            
+            path = '/index.html';
+        break;
+        case '/master':
+            path = '/master.html';
+        break;
+        case '/user':
+            path = '/user.html';
+        break;
+    }
+    
+    if(ctype) {
+        var fext = pathLib.extname(path);
+
+        switch (fext) {
+            case '.js':
+                ctype['Content-Type'] = 'text/javascript';
+                break;
+            case '.css':
+                ctype['Content-Type'] = 'text/css';
+                break;
+            case '.json':
+                ctype['Content-Type'] = 'application/json';
+                break;
+            case '.png':
+                ctype['Content-Type'] = 'image/png';
+                break;      
+        }
     }
     
     return getPage(path);

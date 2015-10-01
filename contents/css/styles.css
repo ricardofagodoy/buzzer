@@ -2,6 +2,15 @@ body {
   background: #EBEAEB; 
 }
 
+#footer {
+    background-color: yellow;
+}
+
+#buzz {
+    background-color: red;
+    margin: 0px;
+}
+
 .header.panel {
   margin: 3rem auto;
   border: 2px solid #444;
@@ -23,7 +32,7 @@ body {
 
 .header.panel .sign {
     background: #fff;
-    width: 150px;
+    width: 170px;
     height: 2.4rem;
     border: 2px solid #444;
     position: relative;
