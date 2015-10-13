@@ -1,12 +1,16 @@
 rooms = {};   // global objects to store all rooms and users
 
-var readyText = 'Ready to push!';
+var readyText = 'Ready to push!',
+    roomClosing = 'Master closed this room!';
 
 module.exports = {
    
     destroyRoom: function(code) {
         
-        console.log('Destroying room '+ code);
+        console.log('Disconnecting users from room ' + code + '...');
+        this.broadcastToRoom(code, 'closeRoom', roomClosing);
+        
+        console.log('Destroying room '+ code + '...');
         delete rooms[code];
         
         console.log(rooms);

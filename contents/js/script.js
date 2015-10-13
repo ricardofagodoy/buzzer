@@ -7,9 +7,7 @@ $(function() {
     
     // User flow
     $('#enterRoom').click(function() {
-        
-        socket = io();
-        
+
         var code = $('#code').val(),
             name = $('#name').val();
         
@@ -17,6 +15,8 @@ $(function() {
             showUserErrorMsg('Fill both fields bellow!');
             return;
         }
+        
+        socket = io();
         
         // Attempt to new user
         socket.emit('user', {code: code, name: name});
@@ -60,11 +60,11 @@ $(function() {
                     
                     // To destroy the room friendly
                     socket.emit('closeRoom');
+     
+                    socket.disconnect();
+                    alert(thankYouMessage); 
                     
-                    $('#masterSection').hide();
-                    $('#index').show();
-                    
-                    alert(thankYouMessage);                    
+                    window.location.replace("/");
                 });
                 
                 return;
@@ -88,6 +88,14 @@ $(function() {
         socket.on('press', function(data) {
             $('#buzzText').html(data);
             $('#buzzTextMaster').html(data);
+        });
+        
+        socket.on('closeRoom', function(data) {
+                    
+            socket.disconnect(); 
+            alert(data);
+            
+            window.location.replace("/");
         });
     }
     
