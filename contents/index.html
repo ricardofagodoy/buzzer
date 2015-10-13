@@ -10,59 +10,126 @@
 
   <link rel="stylesheet" href="css/foundation.min.css">
   <link rel="stylesheet" href="css/styles.css">
-    
-  
 
 </head>
 
 <body>
     
     <div id="header" class="row text-center">
-        <a href="/">Buzzer</a>
+        <div class="large-12 small-centered columns">
+            
+        <div class="nav-bar right">
+           <ul class="button-group">
+             <li><a href="#">How</a></li>
+             <li><span class="separator">|</span></li>
+             <li><a href="#">Credits</a></li>
+             <li><span class="separator">|</span></li>
+             <li><a href="#">Download App</a></li>
+            </ul>
+          </div>
+            
+        <a id="appName" href="/">Buzzer!</a>
+        </div>
     </div>
     
-    <div class="row">
-      <div class="small-8 medium-6 large-5 small-centered columns">
+    <main class="row">
+      <div id="index" class="small-10 medium-10 large-4 small-centered columns">
 
         <div class="header panel">
             
-          <div class="sign">
-            <h1>Buzz here!</h1>
-          </div>
+            <div class="sign">
+                <h1>Buzz here!</h1>
+            </div>
+            
+            
+            <p id="userError" class="hide"></p>
             
             <p>
-                <span>Your buzz room code:</span>
-                <input type="text" size=8 placeholder="CODE"></input>
+                <span>Buzz room code: </span>
+                <input id="code" type="text" size=8 placeholder="CODE"></input>
 
                 <br/>
 
                 <span>Your nickname:</span>
-                <input type="text" size=12 placeholder="NICK"></input>
+                <input id="name" type="text" size=12 placeholder="NICK"></input>
 
                 <br/>
 
-                <a href="user" class="button tiny">Go</a>
+                <a id="enterRoom" class="button tiny">Enter room!</a>
             </p>
     
             <hr/>
-        
-            <div class="row">
-                <div class="large-10 large-centered text-center columns">
-                    <a href="master" class="button">Create new room</a>
-                </div>
+    
+            <p>
+                <a id="newRoom" class="button tiny">Create a new room!</a>
+            </p>
+
+        </div>
+      </div>
+
+    <!-- USER -->
+
+      <div id="userSection" class="hide small-10 medium-6 large-4 small-centered columns">
+
+        <div class="header panel">
+            
+            <div class="sign">
+                <h1>Buzz here!</h1>
             </div>
-        
+            
+            <p id="buzz">
+                <span id="buzzText" style="position: relative; left: 20%; top: 20%;"></span>
+            </p>
+                
+            <hr/>
+    
+            <p>
+                <span>Info: 3 other people connected.</span>
+            </p>
+
         </div>
 
       </div>
-    </div>
+
+    <!-- MASTER -->
+
+      <div id="masterSection" class="hide small-10 medium-6 large-4 small-centered columns">
+
+        <div class="header panel">
+            
+            <div class="sign">
+                <h1 id="codeLabel"></h1>
+            </div>
+            
+            <p id="buzzMaster">
+                <span id="buzzTextMaster" style="position: relative; left: 20%; top: 20%;">Click here to start!</span>
+            </p>
+                
+            <hr/>
+    
+            <p>
+                <span>Info: 3 other people connected.</span>
+            </p>
+            
+            <hr/>
+    
+            <p>
+                <a id="closeRoom" class="button tiny">Close room!</a>
+            </p>
+
+        </div>
+
+      </div>
+
+    </main>
 
     <div id="footer" class="row text-center">
-      Ok!
+      Buzzer Button - RG 2015
     </div>
-    
+        
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/foundation.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

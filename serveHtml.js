@@ -13,12 +13,6 @@ module.exports = function(path, ctype) {
         case '/index':
             path = '/index.html';
         break;
-        case '/master':
-            path = '/master.html';
-        break;
-        case '/user':
-            path = '/user.html';
-        break;
     }
     
     if(ctype) {

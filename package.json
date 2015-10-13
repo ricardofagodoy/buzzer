@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/ricardofagodoy/buzzer/issues"
   },
-  "homepage": "https://github.com/ricardofagodoy/buzzer#readme"
+  "homepage": "https://github.com/ricardofagodoy/buzzer#readme",
+  "dependencies": {
+    "socket.io": "^1.3.7"
+  }
 }

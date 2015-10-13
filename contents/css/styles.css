@@ -1,26 +1,89 @@
 body {
-  background: #EBEAEB; 
+  background: #FFF;
+  font-family: papyrus;
+}
+
+#header {
+    background-color: red;
+    text-decoration: none;
+    border-radius: 0px 0px 20px 20px;
+    -moz-border-radius: 0px 0px 20px 20px;
+    -webkit-border-radius: 0px 0px 20px 20px;
+    border: 0px solid #000000;
+}
+
+#header #appName {
+    color: #FFFFFF;
+    font-size: 60px;
+}
+
+#header a {
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 10px;
+}
+
+#header ul {
+    margin-top: 5px;
+}
+
+#header .separator {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+main {
+    background-color: #000000;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 0px solid #000000;
 }
 
 #footer {
-    background-color: yellow;
+    color: #000000;
+    font-size: 12px;
+    font-style: italic;
+}
+
+#userError {
+    color: #FF0000;
+    font-size: 75%;
 }
 
 #buzz {
     background-color: red;
     margin: 0px;
+    width: 100%;
+    height: 100px;
+}
+
+#buzzMaster {
+    background-color: yellow;
+    margin: 0px;
+    width: 100%;
+    height: 100px;
+}
+
+#buzzText #buzzTextMaster {
+    background-color: greenyellow;
+    margin: 0px;
+    width: 100%;
+    height: 100px;
 }
 
 .header.panel {
   margin: 3rem auto;
   border: 2px solid #444;
   background: #fff; 
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
 }
 
 .header.panel p {
-    font: 1rem "Avenir Next";
-    padding: 1rem 2rem 2rem 2rem;
-    margin-top: -1.25rem; 
+    padding: 1rem 2rem 0rem 2rem;
+    margin-top: -1.25rem;
 }
 
 .header.panel p span {
@@ -28,6 +91,21 @@ body {
       letter-spacing: 1px;
       font-size: 75%;
       font-weight: bold; 
+}
+
+.header.panel p .button {
+    color: #fff;
+    background: red; 
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.header.panel p #master {
+    color: yellow;
+    margin: 5px;
 }
 
 .header.panel .sign {
@@ -42,15 +120,10 @@ body {
 
 .header.panel .sign h1 {
       text-transform: uppercase;
-      font: bolder 0.875rem "Avenir Next";
+      font: bolder 0.9rem "Papyrus";
       letter-spacing: 3px;
       color: #666;
       font-size: 70%;
       text-align: center;
       line-height: 2rem; 
-}
-
-#header {
-    background-color: yellow;
-    font-size: 40px;
 }
