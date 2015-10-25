@@ -123,11 +123,6 @@ main {
     margin-top: 10px;
 }
 
-.header.panel p #master {
-    color: yellow;
-    margin: 5px;
-}
-
 .header.panel .sign {
     background: #fff;
     width: 170px;
