@@ -33,91 +33,87 @@
     </div>
     
     <main class="row">
-      <div id="index" class="small-10 medium-10 large-4 small-centered columns">
-
-        <div class="header panel">
+        
+        <div id="index" class="header panel small-12 medium-10 large-8 small-centered columns ">
             
             <div class="sign">
                 <h1>Buzz here!</h1>
             </div>
             
+            <div class="row">
+                <div class="small-12 medium-8 large-6 small-centered columns">
+                    <p id="userError" class="hide"></p>
+                </div>
+            </div>
             
-            <p id="userError" class="hide"></p>
-            
-            <p>
-                <span>Buzz room code: </span>
-                <input id="code" type="text" size=8 placeholder="CODE"></input>
+            <div class="row">
+                <div class="small-12 medium-8 large-6 small-centered columns">
+                    <span class="formatText" >Room code: </span>
+                    <input id="code" type="text" size=8 placeholder="Room Code"></input>
+                </div>
+            </div>
+        
+            <br/>
+        
+            <div class="row">
+                <div class="small-12 medium-8 large-6 small-centered columns">
+                    <span class="formatText" >Nickname:</span>
+                    <input id="name" type="text" size=8 placeholder="Nickname"></input>
+                </div>
+            </div>
 
-                <br/>
+            <br/>
 
-                <span>Your nickname:</span>
-                <input id="name" type="text" size=12 placeholder="NICK"></input>
-
-                <br/>
-
-                <a id="enterRoom" class="button tiny">Enter room!</a>
-            </p>
+            <a id="enterRoom" class="button tiny">Enter room!</a>
     
             <hr/>
     
-            <p>
-                <a id="newRoom" class="button tiny">Create a new room!</a>
-            </p>
-
+            <a id="newRoom" class="button tiny">Create a new room!</a>
+    
         </div>
-      </div>
+    
 
     <!-- USER -->
 
-      <div id="userSection" class="hide small-10 medium-6 large-4 small-centered columns">
-
-        <div class="header panel">
+      <div id="userSection" class="hide header panel small-12 medium-10 large-6 small-centered columns">
             
             <div class="sign">
                 <h1>Buzz here!</h1>
             </div>
-            
-            <p id="buzz">
-                <span id="buzzText" style="position: relative; left: 20%; top: 20%;"></span>
-            </p>
+          
+            <div id="buzz">
+                <div id="buzzText" class="text-center">
+                    Click here to start!
+                </div>
+            </div>
                 
             <hr/>
     
-            <p>
-                <span>Info: Server is Online!</span>
-            </p>
-
-        </div>
+            <div class="text-center">Info: Server is Online!</div>
 
       </div>
 
     <!-- MASTER -->
 
-      <div id="masterSection" class="hide small-10 medium-6 large-4 small-centered columns">
-
-        <div class="header panel">
+        <div id="masterSection" class="hide header panel small-12 medium-10 large-8 small-centered columns">
             
             <div class="sign">
                 <h1 id="codeLabel"></h1>
             </div>
             
-            <p id="buzzMaster">
-                <span id="buzzTextMaster" style="position: relative; left: 20%; top: 20%;">Click here to start!</span>
-            </p>
+            <div id="buzzMaster">
+                <div id="buzzTextMaster" class="text-center">
+                    Click here to start!
+                </div>
+            </div>
                 
             <hr/>
     
-            <p>
-                <span>Info: Server is Online!</span>
-            </p>
+            <div class="text-center">Info: Server is Online!</div>
             
             <hr/>
     
-            <p>
-                <a id="closeRoom" class="button tiny">Close room!</a>
-            </p>
-
-        </div>
+            <a id="closeRoom" class="button tiny">Close room!</a>
 
       </div>
 
